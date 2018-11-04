@@ -4,7 +4,10 @@ import java.util.Arrays;
 
 public class PhraseReverse {
     public static String reverse(String str){
-        return new StringBuilder(str).reverse().toString();
+        if(str.equals("")) {
+            throw new IllegalArgumentException();
+        }
+            return new StringBuilder(str).reverse().toString();
     }
 
     public static String reverseWords(String str){
